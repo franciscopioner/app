@@ -14,6 +14,7 @@ const nextConfig = {
         remotes: {
           header: `header@http://localhost:3002/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`,
           cart: `cart@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`,
+          footer: `footer@http://localhost:3003/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`,
         },
         exposes: {},
         extraOptions: {
