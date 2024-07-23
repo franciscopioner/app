@@ -1,23 +1,16 @@
-import dynamic from 'next/dynamic';
-import { Cart, Header, Footer, PageWrapper } from './styles';
+import Cart from "@/components/Cart";
+import Container from "../components/Container";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
-const RemoteHeader = dynamic(() => import('header/header'), { ssr: false });
-const RemoteCartPage = dynamic(() => import('cart/cart'), { ssr: false });
-const RemoteFooter = dynamic(() => import('footer/footer'), { ssr: false });
 
 const Main: React.FC = () => {
   return (
-    <PageWrapper>
-      <Header>
-        <RemoteHeader />
-      </Header>
-      <Footer>
-        <RemoteFooter />
-      </Footer>
-      <Cart>
-      <RemoteCartPage />
-    </Cart>
-    </PageWrapper>
+    <Container>
+      <Header />
+      <Footer />
+      <Cart />
+    </Container>
   );
 };
 
